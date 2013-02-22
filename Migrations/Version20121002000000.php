@@ -28,7 +28,7 @@ class Version20121002000000 extends BundleMigration
      */
     public function down(Schema $schema)
     {
-        $schema->dropTable('claro_example_text');
+        $schema->dropTable('claro_example');
     }
 
     /**

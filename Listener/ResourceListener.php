@@ -2,17 +2,17 @@
 
 namespace Claroline\ExampleBundle\Listener;
 
-use Claroline\CoreBundle\Library\Resource\Event\CopyResourceEvent;
-use Claroline\CoreBundle\Library\Resource\Event\CreateFormResourceEvent;
-use Claroline\CoreBundle\Library\Resource\Event\CreateResourceEvent;
-use Claroline\CoreBundle\Library\Resource\Event\OpenResourceEvent;
-use Claroline\CoreBundle\Library\Resource\Event\DeleteResourceEvent;
-use Claroline\CoreBundle\Library\Resource\Event\ExportResourceEvent;
+use Claroline\CoreBundle\Library\Event\CopyResourceEvent;
+use Claroline\CoreBundle\Library\Event\CreateFormResourceEvent;
+use Claroline\CoreBundle\Library\Event\CreateResourceEvent;
+use Claroline\CoreBundle\Library\Event\OpenResourceEvent;
+use Claroline\CoreBundle\Library\Event\DeleteResourceEvent;
+use Claroline\CoreBundle\Library\Event\ExportResourceEvent;
 use Claroline\ExampleBundle\Entity\Example;
 use Claroline\ExampleBundle\Form\ExampleType;
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Claroline\CoreBundle\Library\Plugin\Event\PluginOptionsEvent;
+use Claroline\CoreBundle\Library\Event\PluginOptionsEvent;
 
 class ResourceListener extends ContainerAware
 {

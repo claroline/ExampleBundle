@@ -2,7 +2,7 @@
 
 namespace Claroline\ExampleBundle\Listener;
 
-use Claroline\CoreBundle\Library\Tool\Event\DisplayToolEvent;
+use Claroline\CoreBundle\Library\Event\DisplayToolEvent;
 use Symfony\Component\DependencyInjection\ContainerAware;
 
 class ToolListener extends ContainerAware

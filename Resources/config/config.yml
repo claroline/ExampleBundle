@@ -1,5 +1,6 @@
 plugin:
   has_options: false
+  icon: res_file.png
 
   widgets:
     - name: claroline_mywidget1
@@ -12,7 +13,7 @@ plugin:
       name: claroline_example
       is_visible: true
       is_browsable: true
-      icon: res_text.png
+      icon: res_file.png
 
   tools:
     - name: claroline_mytool

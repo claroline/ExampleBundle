@@ -43,6 +43,9 @@ class Version20121002000000 extends BundleMigration
         $this->addId($table);
         // Add a column
         $table->addColumn('text', 'text');
+        // Delete the Example resource on claro_example table when it's deleted on claro_resource table
+        $table->addForeignKeyConstraint(
+            $schema->getTable('claro_resource'), array('id'), array('id'), array("onDelete" => "CASCADE")
+        );
     }
-
 }

@@ -21,7 +21,7 @@ services:
       - { name: kernel.event_listener, event: create_form_claroline_example, method: onCreateForm }
       - { name: kernel.event_listener, event: create_claroline_example, method: onCreate }
       - { name: kernel.event_listener, event: open_claroline_example, method: onOpen }
-      - { name: kernel.event_listener, event: export_claroline_example, method: onExport }
+      - { name: kernel.event_listener, event: download_claroline_example, method: onDownload }
       - { name: kernel.event_listener, event: delete_claroline_example, method: onDelete }
       - { name: kernel.event_listener, event: copy_claroline_example, method: onCopy }
       - { name: kernel.event_listener, event: plugin_options_clarolineexampletest, method: onAdministrate }

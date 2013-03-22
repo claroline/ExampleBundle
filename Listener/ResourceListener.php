@@ -7,7 +7,7 @@ use Claroline\CoreBundle\Library\Event\CreateFormResourceEvent;
 use Claroline\CoreBundle\Library\Event\CreateResourceEvent;
 use Claroline\CoreBundle\Library\Event\OpenResourceEvent;
 use Claroline\CoreBundle\Library\Event\DeleteResourceEvent;
-use Claroline\CoreBundle\Library\Event\ExportResourceEvent;
+use Claroline\CoreBundle\Library\Event\DownloadResourceEvent;
 use Claroline\ExampleBundle\Entity\Example;
 use Claroline\ExampleBundle\Form\ExampleType;
 use Symfony\Component\DependencyInjection\ContainerAware;
@@ -89,8 +89,8 @@ class ResourceListener extends ContainerAware
         $event->stopPropagation();
     }
 
-    //Fired once a resource is exported (downloaded).
-    public function onExport(ExportResourceEvent $event)
+    //Fired once a resource is downloaded.
+    public function onDownload(DownloadResourceEvent $event)
     {
         $example = $event->getResource();
         //create new temporary file wich contains our text.

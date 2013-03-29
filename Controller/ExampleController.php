@@ -3,9 +3,20 @@
 namespace Claroline\ExampleBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class ExampleController extends Controller
 {
+    /**
+     * @Route(
+     *     "/open/{exampleId}",
+     *     name = "claro_example_open"
+     * )
+     *
+     * @param integer $exampleId
+     *
+     * @return Response
+     */
     public function openAction($exampleId)
     {
         $em = $this->get('doctrine.orm.entity_manager');

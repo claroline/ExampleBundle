@@ -1,3 +1,4 @@
-claro_example_open:
-   pattern: /open/{exampleId}
-   defaults: { _controller: ClarolineExampleBundle:Example:open }
+claro_example_bundle:
+    resource: "@ClarolineExampleBundle/Controller/"
+    type:     annotation
+    prefix:   /

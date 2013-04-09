@@ -11,7 +11,6 @@ plugin:
   resources:
     - class: Claroline\ExampleBundle\Entity\Example
       name: claroline_example
-      is_visible: true
       is_browsable: true
       icon: res_file.png
 

@@ -30,7 +30,7 @@ class ExampleController extends Controller
         //get the text.
         return $this->render(
             'ClarolineExampleBundle::resource.html.twig',
-            array('resource' => $resource, 'workspace' => $workspace)
+            array('resource' => $resource, 'workspace' => $workspace, '_resource' => $resource)
         );
     }
 }

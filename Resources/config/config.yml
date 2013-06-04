@@ -20,7 +20,7 @@ plugin:
       is_displayable_in_workspace: true
       is_displayable_in_desktop: true
   themes:
-    - name: ExampleBundleTheme
-      path: less:example/theme.html.twig
+    - name: "ExampleBundle Theme"
+      path: less/example/theme.html.twig
 
 

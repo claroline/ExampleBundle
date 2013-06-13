@@ -45,7 +45,7 @@ class ResourceListener extends ContainerAware
     {
         $request = $this->container->get('request');
         $form = $this->container->get('form.factory')->create(new ExampleType, new Example());
-        $form->bindRequest($request);
+        $form->handleRequest($request);
 
         if ($form->isValid()) {
             //gets the new resource.

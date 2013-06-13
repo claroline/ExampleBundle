@@ -2,7 +2,7 @@
 {% extends "ClarolineCoreBundle:Workspace:layout.html.twig" %}
 {# use the section_content block to display yor html #}
 {% block section_content %}
-{{ resource.getName() }}
+{{ _resource.getName() }}
 <br>
-{{ resource.getText() }}
+{{ _resource.getText() }}
 {% endblock %}

@@ -24,14 +24,14 @@ class ToolListener extends ContainerAware
         $workspace = $em->getRepository('ClarolineCoreBundle:Workspace\AbstractWorkspace')->find($workspaceId);
 
         return $this->container->get('templating')->render(
-            'ClarolineExampleBundle::workspace_tool.html.twig', array('workspace' => $workspace)
+            'ClarolineExampleBundle::workspaceTool.html.twig', array('workspace' => $workspace)
         );
     }
 
     private function desktop()
     {
         return $this->container->get('templating')->render(
-            'ClarolineExampleBundle::desktop_tool.html.twig'
+            'ClarolineExampleBundle::desktopTool.html.twig'
         );
     }
 }

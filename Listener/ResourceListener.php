@@ -30,7 +30,7 @@ class ResourceListener extends ContainerAware
         //The '_resourceId' isn't a mistake, it's a placeholder wich will be replaced with js later on.
 
         $content = $this->container->get('templating')->render(
-            'ClarolineCoreBundle:Resource:create_form.html.twig', array(
+            'ClarolineCoreBundle:Resource:createForm.html.twig', array(
             'form' => $form->createView(),
             'resourceType' => 'claroline_example'
             )
@@ -59,7 +59,7 @@ class ResourceListener extends ContainerAware
 
         //if the form is invalid, renders the form with its errors.
         $content = $this->container->get('templating')->render(
-            'ClarolineCoreBundle:Resource:create_form.html.twig',
+            'ClarolineCoreBundle:Resource:createForm.html.twig',
             array(
                 'form' => $form->createView(),
                 'resourceType' => 'claroline_example'

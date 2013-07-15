@@ -51,7 +51,7 @@ class ResourceListener extends ContainerAware
             //gets the new resource.
             $example = $form->getData();
             //give it back to the event.
-            $event->setResource($example);
+            $event->setResources(array($example));
             $event->stopPropagation();
 
             return;

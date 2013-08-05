@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Example extends AbstractResource
 {
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column()
      */
     private $text;
 

@@ -3,7 +3,7 @@
     "description": "Claroline plugin example",
     "keywords": ["Claroline", "Plugin", "Development", "Example"],
     "homepage": "http://www.claroline.net",
-    "type": "bundle",
+    "type": "claroline-plugin",
     "license": "",
     "authors": [
         {

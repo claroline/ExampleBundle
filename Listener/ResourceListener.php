@@ -25,9 +25,9 @@ class ResourceListener extends ContainerAware
         //Be carefull, the resourceType is case sensitive.
         //If you don't want to use the default form, feel free to create your own.
         //Make sure the submit route is
-        //action="{{ path('claro_resource_create', {'resourceType':resourceType, 'parentInstanceId':'_resourceId'}) }}".
+        //action="{{ path('claro_resource_create', {'resourceType':resourceType, 'parentInstanceId':'_nodeId'}) }}".
         //Anything else different won't work.
-        //The '_resourceId' isn't a mistake, it's a placeholder wich will be replaced with js later on.
+        //The '_nodeId' isn't a mistake, it's a placeholder wich will be replaced with js later on.
 
         $content = $this->container->get('templating')->render(
             'ClarolineCoreBundle:Resource:createForm.html.twig', array(

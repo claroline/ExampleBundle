@@ -1,0 +1,28 @@
+{
+    "name": "claroline/example-bundle",
+    "description": "Claroline plugin example",
+    "keywords": ["Claroline", "Plugin", "Development", "Example"],
+    "homepage": "http://www.claroline.net",
+    "type": "claroline-plugin",
+    "license": "",
+    "authors": [
+        {
+            "name": "Claroline development team",
+            "email": "dev@claroline.net",
+            "homepage": "http://github.com/claroline"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/framework-bundle":  "2.*",
+        "symfony/symfony":           "2.*"
+
+    },
+    "autoload": {
+        "psr-0": { "Claroline\\ExampleBundle": "" }
+    },
+    "target-dir": "Claroline/ExampleBundle",
+    "extra": {
+        "dbVersion": "20130805105245"
+    }
+}

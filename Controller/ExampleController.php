@@ -24,7 +24,7 @@ class ExampleController extends Controller
     {
         $em = $this->get('doctrine.orm.entity_manager');
         //get the resource
-        $resource = $em->getRepository('ClarolineCoreBundle:Resource\AbstractResource')->find($exampleId);
+        $resource = $em->getRepository('ClarolineExampleBundle:Example')->find($exampleId);
 
         //get the text.
         return array('_resource' => $resource);

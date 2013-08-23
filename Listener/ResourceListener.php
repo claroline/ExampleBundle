@@ -5,6 +5,7 @@ namespace Claroline\ExampleBundle\Listener;
 use Claroline\CoreBundle\Event\Event\CopyResourceEvent;
 use Claroline\CoreBundle\Event\Event\CreateFormResourceEvent;
 use Claroline\CoreBundle\Event\Event\CreateResourceEvent;
+use Claroline\CoreBundle\Event\Event\CustomActionResourceEvent;
 use Claroline\CoreBundle\Event\Event\OpenResourceEvent;
 use Claroline\CoreBundle\Event\Event\DeleteResourceEvent;
 use Claroline\CoreBundle\Event\Event\DownloadResourceEvent;
@@ -12,6 +13,7 @@ use Claroline\ExampleBundle\Entity\Example;
 use Claroline\ExampleBundle\Form\ExampleType;
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Claroline\CoreBundle\Event\Event\PluginOptionsEvent;
 
 class ResourceListener extends ContainerAware
@@ -118,5 +120,11 @@ class ResourceListener extends ContainerAware
     public function onAdministrate(PluginOptionsEvent $event)
     {
         //you can use this function to display a form
+    }
+
+    public function onCustomNewPage(CustomActionResourceEvent $event)
+    {
+        $event->setResponse(new Response('CUSTOM ACTION NEW PAGE'));
+        $event->stopPropagation();
     }
 }

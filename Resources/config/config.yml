@@ -12,6 +12,15 @@ plugin:
     - class: Claroline\ExampleBundle\Entity\Example
       name: claroline_example
       icon: res_file.png
+      actions:
+          # The name of the action is the translation key that will be used to display
+          #  the action in the list of available actions for your resource.
+          #  The name will be passed to you by the Event manager.
+        - name: newpage
+          is_action_in_new_page: true
+        - name: newpopup
+          is_action_in_new_page: false
+
 
   tools:
     - name: claroline_mytool

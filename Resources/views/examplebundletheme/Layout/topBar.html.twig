@@ -159,7 +159,7 @@
                     <ul class="dropdown-menu">
                         {% if isLogged %}
                             <li>
-                            <a href="{{ path('claro_profile_form') }}" id="link-account">
+                            <a href="{{ path('claro_profile_form', {'user': app.user.id}) }}" id="link-account">
                                 {{ 'my_account'|trans({}, 'platform') }}
                             </a>
                             </li>

@@ -13,14 +13,28 @@ plugin:
       name: claroline_example
       icon: res_file.png
       actions:
-          # The name of the action is the translation key that will be used to display
-          #  the action in the list of available actions for your resource.
-          #  The name will be passed to you by the Event manager.
+         # The name and the menu_name will be used as translation keys. Their domain is 'resource' eg resource.en.yml.
+         # the action in the list of available actions for your resource.
+         # The name will be passed to you by the Event manager.
+         # We're aware that the right management modal will need some rework (too many rights = broken modal).
+
+         #That one has a new menu item and a new permission
         - name: newpage
           menu_name: new_menu
-        - name: newpopup
-          menu_name: new_popup
 
+         #define a new permission without the menu item
+        - name: newpopup
+
+         #define a new menu item associated to an existing permission (open is one of the base perm)
+        - name: open
+          menu_name: open_bis
+
+         #this 2 menu items are bound to a new permission
+        - name: example
+          menu_name: ex1
+
+        - name: example
+          menu_name: ex2
 
   tools:
     - name: claroline_mytool

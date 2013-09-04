@@ -5,13 +5,14 @@ namespace Claroline\ExampleBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ExampleType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         //The field name is mandatory. This is a non mapped variable of AbstractResource.
-        $builder->add('name', 'text');
+        $builder->add('name', 'text', array('constraints' => new NotBlank()));
         $builder->add('text', 'textarea');
     }
 

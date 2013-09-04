@@ -25,7 +25,7 @@ services:
       - { name: kernel.event_listener, event: delete_claroline_example, method: onDelete }
       - { name: kernel.event_listener, event: copy_claroline_example, method: onCopy }
       - { name: kernel.event_listener, event: plugin_options_clarolineexampletest, method: onAdministrate }
-      - { name: kernel.event_listener, event: newpage_claroline_example, method: onCustomNewPage }
+      - { name: kernel.event_listener, event: new_popup_claroline_example, method: onCustomNewPage }
       #... more to come.
 
 

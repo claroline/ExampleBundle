@@ -17,9 +17,9 @@ plugin:
           #  the action in the list of available actions for your resource.
           #  The name will be passed to you by the Event manager.
         - name: newpage
-          is_action_in_new_page: true
+          menu_name: new_menu
         - name: newpopup
-          is_action_in_new_page: false
+          menu_name: new_popup
 
 
   tools:

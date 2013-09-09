@@ -1,6 +1,6 @@
 <?php
 
-namespace Claroline\ExampleBundle\Migrations\pdo_ibm;
+namespace Claroline\ExampleBundle\Migrations\pdo_sqlite;
 
 use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
@@ -8,9 +8,9 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated migration based on mapping information: modify it with caution
  *
- * Generation date: 2013/08/05 10:52:46
+ * Generation date: 2013/09/09 09:51:11
  */
-class Version20130805105245 extends AbstractMigration
+class Version20130909095110 extends AbstractMigration
 {
     public function up(Schema $schema)
     {
@@ -18,14 +18,12 @@ class Version20130805105245 extends AbstractMigration
             CREATE TABLE claro_example (
                 id INTEGER NOT NULL, 
                 text VARCHAR(255) NOT NULL, 
+                resourceNode_id INTEGER DEFAULT NULL, 
                 PRIMARY KEY(id)
             )
         ");
         $this->addSql("
-            ALTER TABLE claro_example 
-            ADD CONSTRAINT FK_EAF2638BF396750 FOREIGN KEY (id) 
-            REFERENCES claro_resource (id) 
-            ON DELETE CASCADE
+            CREATE UNIQUE INDEX UNIQ_EAF2638B87FAB32 ON claro_example (resourceNode_id)
         ");
     }
 

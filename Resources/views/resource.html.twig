@@ -2,7 +2,10 @@
 {% extends "ClarolineCoreBundle:Workspace:layout.html.twig" %}
 {# use the section_content block to display your html #}
 {% block section_content %}
-{{ _resource.getName() }}
-<br>
-{{ _resource.getText() }}
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ _resource.getResourceNode().getName() }}</h3>
+    </div>
+    <div class="panel-body">
+        {{ _resource.getText() }}
+    </div>
 {% endblock %}
